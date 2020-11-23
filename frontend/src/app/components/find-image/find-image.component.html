@@ -1,0 +1,17 @@
+<form class="search-form" (ngSubmit)="fetchImages()">
+  <mat-form-field>
+    <mat-label>{{tplText.SEARCH_INPUT}}</mat-label>
+    <input type="text" matInput required
+      placeholder="{{tplText.SEARCH_PLACEHOLDER}}"
+      [disabled]="isLoading"
+      [formControl]="searchFormControl"
+      [(ngModel)]="query"
+    />
+    <mat-error *ngIf="!searchFormControl.hasError('required')">
+      {{tplText.SEARCH_ERROR}}
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">
+    {{tplText.SEARCH}}
+  </button>
+</form>
