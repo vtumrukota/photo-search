@@ -16,5 +16,7 @@
       <p>{{item.description}}</p>
     </mat-card-content>
   </mat-card>
-
+  <div class="no-results" *ngIf="!images.length">
+    <h3>{{tplText.NO_RESULTS}}</h3>
+  </div>
 </div>

@@ -62,6 +62,7 @@ export interface IImgurImageData {
 // Naive setup to easily add localization later for text going to view
 export const APP_TPL_TEXT = {
   HEADER: 'Photo Gallery Finder',
+  NO_RESULTS: 'No images matched your search. Please try a new search term!',
   SEARCH: 'Search',
   SEARCHING: 'Searching...',
   SEARCH_INPUT: 'Search Images',
@@ -79,3 +80,5 @@ export const DIALOG_CFG = {
   maxWidth: '98vw',
   panelClass: 'full-screen-modal',
 };
+
+export const MAX_PAGE_SIZE = 60;

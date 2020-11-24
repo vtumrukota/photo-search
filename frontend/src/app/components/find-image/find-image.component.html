@@ -3,7 +3,6 @@
     <mat-label>{{tplText.SEARCH_INPUT}}</mat-label>
     <input type="text" matInput required
       placeholder="{{tplText.SEARCH_PLACEHOLDER}}"
-      [disabled]="isLoading"
       [formControl]="searchFormControl"
       [(ngModel)]="query"
     />
@@ -12,7 +11,20 @@
     </mat-error>
   </mat-form-field>
   <button mat-raised-button color="accent" type="submit"
-    [disabled]="isLoading">
+    [disabled]="isLoading || !query">
     {{isLoading ? tplText.SEARCHING : tplText.SEARCH}}
   </button>
+  <div class="pagination" *ngIf="hitSubmit && !singlePage">
+    <span>Current Page: {{page}}</span>
+    <button mat-raised-button color="warn" type="button"
+      [disabled]="isLoading"
+      (click)="getPrevPage()">
+      Previous
+    </button>
+    <button mat-raised-button color="warn" type="button"
+      [disabled]="isLoading"
+      (click)="getNextPage()">
+      Next
+    </button>
+  </div>
 </form>
