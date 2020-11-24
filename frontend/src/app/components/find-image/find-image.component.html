@@ -11,7 +11,8 @@
       {{tplText.SEARCH_ERROR}}
     </mat-error>
   </mat-form-field>
-  <button mat-raised-button color="primary" type="submit">
-    {{tplText.SEARCH}}
+  <button mat-raised-button color="accent" type="submit"
+    [disabled]="isLoading">
+    {{isLoading ? tplText.SEARCHING : tplText.SEARCH}}
   </button>
 </form>

@@ -14,12 +14,11 @@ export class AppComponent {
 
   constructor() {}
 
-  setImages(event): void {
-    console.log('setImages fired', event);
-    const items = event.data || [];
-    this.imageList = items.map((image) => {
+  setImages(images: any = []): void {
+    this.imageList = images.map((image) => {
       return new ImageCard(image);
     });
+    console.log('image list: ', this.imageList);
   }
 
 }

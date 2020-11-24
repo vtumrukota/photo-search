@@ -1,1 +1,23 @@
-<p>image-list works!</p>
+<div class="card-container">
+  <mat-card *ngFor="let item of images" class="image-card">
+    <mat-card-header>
+      <mat-card-title>{{item.title}}</mat-card-title>
+      <mat-card-subtitle>{{item.views}}{{tplText.VIEWS}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="image wrapper">
+      <div class="image" *ngFor="let img of item.images">
+        <img mat-card-image
+          *ngIf="!img.nsfw"
+          (click)="showImage(img)"
+          src="{{img.link}}" alt="{{img.title}}" />
+      </div>
+    </div>
+    <mat-card-content>
+      <p>
+        {{item.description}}
+      </p>
+      <p></p>
+    </mat-card-content>
+  </mat-card>
+
+</div>

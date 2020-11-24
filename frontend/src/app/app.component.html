@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">{{tplText.HEADER}}</mat-toolbar>
 <section class="search-container">
   <div class="search-list">
-    <app-find-image (fetchCb)="setImages($event)"></app-find-image>
+    <app-find-image (fetchImagesCb)="setImages($event)"></app-find-image>
     <app-image-list [images]="imageList"></app-image-list>
   </div>
 </section>

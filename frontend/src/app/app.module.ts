@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { FindImageComponent } from './components/find-image/find-image.component';
 import { ImageListComponent } from './components/image-list/image-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ImageListComponent } from './components/image-list/image-list.component
     ImageListComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,

@@ -35,9 +35,7 @@ export class FindImageComponent {
     this.query = this.sanitizer.sanitize(SecurityContext.HTML, this.query);
     this.searchImages.getImages(this.query).subscribe((resp) => {
       this.isLoading = false;
-      console.log('resp from imgur', resp);
-      const data = resp.data;
-      this.fetchImagesCb.emit(data);
+      this.fetchImagesCb.emit(resp.data);
     }, (err) => {
       this.isLoading = false;
       console.log('Error on Search', err);

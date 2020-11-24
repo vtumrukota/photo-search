@@ -72,8 +72,10 @@ typings/
 .env
 .env.test
 
-# DStore 
+# DStore & env_config.json
 .DS_Store
+env_config.json
+
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
