@@ -1,5 +1,14 @@
 # Photo Search
 
+### How to Load the Application
+- Add a file called env_config.json with the following to the `frontend/src/env_config.json` path
+
+`{
+  "IMGUR_KEY": "Client-ID <your_id>"
+}`
+
+From the frontend folder, run `npm i --save` then `ng serve --open` to start the build locally in your browser at `localhost:4200`
+
 #### Packages
 - Leveraged the Angular framework to get a setup up and running quickly
 - Installed Angular Material to get UI components up and running quickly
