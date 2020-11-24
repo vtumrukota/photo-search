@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>
+  <span>{{data.title}}</span>
+  <button mat-raised-button color="primary" type="button"
+    (click)="closeDialog()">
+    Close
+  </button>
+</h1>
+<div class="images-container">
+  <div *ngFor="let image of data.images">
+    <img class="focal-img" src="{{image.link}}" alt="{{image.title}}" />
+</div>

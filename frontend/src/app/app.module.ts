@@ -15,12 +15,14 @@ import { AppComponent } from './app.component';
 import { FindImageComponent } from './components/find-image/find-image.component';
 import { ImageListComponent } from './components/image-list/image-list.component';
 import { CommonModule } from '@angular/common';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FindImageComponent,
-    ImageListComponent
+    ImageListComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,

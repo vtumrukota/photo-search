@@ -69,3 +69,13 @@ export const APP_TPL_TEXT = {
   SEARCH_ERROR: 'Please enter a valid search query!',
   VIEWS: 'Views',
 };
+export const DIALOG_CFG = {
+  position: {
+    top: '10px',
+    right: '10px'
+  },
+  height: '98%',
+  width: '100vw',
+  maxWidth: '98vw',
+  panelClass: 'full-screen-modal',
+};

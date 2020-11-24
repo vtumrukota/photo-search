@@ -8,15 +8,12 @@
       <div class="image" *ngFor="let img of item.images">
         <img mat-card-image
           *ngIf="!img.nsfw"
-          (click)="showImage(img)"
+          (click)="showImage(item)"
           src="{{img.link}}" alt="{{img.title}}" />
       </div>
     </div>
     <mat-card-content>
-      <p>
-        {{item.description}}
-      </p>
-      <p></p>
+      <p>{{item.description}}</p>
     </mat-card-content>
   </mat-card>
 

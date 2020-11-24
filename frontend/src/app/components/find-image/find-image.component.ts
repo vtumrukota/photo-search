@@ -5,7 +5,7 @@ import {
   Output,
   SecurityContext
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { APP_TPL_TEXT } from 'src/app/app.definitions';
 import { SearchImageService } from 'src/app/services/search-image.service';
@@ -21,7 +21,7 @@ export class FindImageComponent {
   @Output() fetchImagesCb = new EventEmitter<any>();
   query = '';
   isLoading = false;
-  searchFormControl = new FormControl('');
+  searchFormControl = new FormControl({ disabled: true }, Validators.required);
   readonly tplText = APP_TPL_TEXT;
 
   constructor(
