@@ -1,4 +1,9 @@
 <div class="card-container">
+  <div class="tag-list">
+    <span class="photo-tag" *ngFor="let tag of tagList">
+      {{tag.name}}: {{tag.count}}
+    </span>
+  </div>
   <mat-card *ngFor="let item of images" class="image-card">
     <mat-card-header>
       <mat-card-title>{{item.title}}</mat-card-title>

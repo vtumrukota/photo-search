@@ -24,8 +24,9 @@ export class SearchImageService {
   }
 
   private setHeaders(): void {
+    console.log('imgur key', CONFIG.IMGUR_KEY);
     this.headers = new HttpHeaders()
       .set('content-type', 'application/json')
-      .set('Authorization', CONFIG.IMGUR_KEY);
+      .set('Authorization', `Client-ID ${CONFIG.IMGUR_KEY}`);
   }
 }
